@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .attendance h3{
+            background-color:rgba(16, 208, 242, 0.235);
+            color: black;
+            padding: 20px;
+            margin: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .attendance p
+        {
+        padding: 15px;
+        background-color: rgba(0, 0, 255, 0.323) ;
+        border-radius: 5px;
+        margin: 0;
+        color: rgb(12, 12, 12);
+        font-weight: bold;
+        display: none;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: beige;">
+    <h1>Welcome to the Student Dashboard</h1>
+    <!-- Student-specific content goes here -->
+    <div class="attendance">
+        <h3>Attendance</h3>
+        <p>80% OF sem 1</p>
+    </div>
+    <div class="attendance">
+        <h3>Attendance</h3>
+        <p>80% OF sem 1</p>
+    </div>
+    <div class="assignments">
+        <h3>Your assignments</h3>
+        <p>80% OF sem 1</p>
+    </div>
+    <script>
+        $(document).ready(function() 
+    { 
+     $(".attendance h3").on("click", function(){ 
+    var attendance=$(this).parent(); 
+    attendance.find("p").slideToggle(); 
+    }); 
+    });
+    </script>
+</body>
+</html>
